@@ -10,4 +10,8 @@ Further information on downloading and installing the code is given hereafter fo
 
 The tutorial notebooks can be found at:
 
-[CLASS_SZ Notebooks](https://github.com/CLASS-SZ/notebooks)
+https://github.com/CLASS-SZ/notebooks
+
+The code is in:
+
+https://github.com/CLASS-SZ/class_sz
