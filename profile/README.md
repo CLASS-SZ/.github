@@ -123,7 +123,7 @@ $ pip install -e .
 $ cd ../..
 $ git clone https://github.com/CLASS-SZ/classy_szfast
 $ cd classy_szfast
-$ pip install -e
+$ pip install -e .
 ```
 
 The `-j` flag speeds up the compilation process by using multiple cores. This compiles 
