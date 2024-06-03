@@ -1,17 +1,215 @@
 # CLASS_SZ
 
-Cosmic Linear Anisotropy Solving System with Machine Learning Accelerated and Accurate CMB, LSS, and Halo Model Observables Computations
+Cosmic Linear Anisotropy Solving System with Machine Learning Accelerated and Accurate CMB, LSS, and Halo Model Observables Computations. 
 
-To install/run CLASS_SZ on the fly, check the Colab notebook:
+To install/run CLASS_SZ on the fly, check the [colab notebook](https://colab.research.google.com/drive/1AULgG4ZLLG1YXRI86L54-hpjWyl1X-8c?usp=sharing).
 
-[Colab Notebook](https://colab.research.google.com/drive/1AULgG4ZLLG1YXRI86L54-hpjWyl1X-8c?usp=sharing)
+The code is pip installable: 
 
-Further information on downloading and installing the code is given hereafter for Mac, M1/2 Mac, and Linux.
+```bash
+$ pip install classy_sz
+```
 
-The tutorial notebooks can be found at:
+If this crashes, check [here](#library-path-configuration). 
 
-https://github.com/CLASS-SZ/notebooks
+If it still crashes and you are a Mac M1 user check [here](#tensorflow-on-mac-m1). 
 
-The code is in:
+If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
 
-https://github.com/CLASS-SZ/class_sz
+We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
+
+You may also want to take a look at a brief summary from ([Bolliet et al 2023](https://arxiv.org/abs/2310.18482)).
+
+## Computing with classy_sz
+
+```python
+from classy_sz import Class()
+class_sz = Class()
+class_sz.set({'output':'tSZ_1h, tSZ_gal_1h',tSZ_gal_1h'}) # ask for cross-correlations, tsz, etc.
+class_sz.compute()
+```
+
+Have a look at the notebooks [CLASS_SZ Notebooks](https://github.com/CLASS-SZ/notebooks). There are loads of examples. 
+
+## Accelerated Computations
+
+To run the emulator-based computations, simply change:
+
+```python
+class_sz.compute()
+```
+to:
+
+```python
+class_sz.compute_class_szfast()
+```
+There are many examples in the notebooks on how to use class_szfast. See [CLASS_SZ Notebooks](https://github.com/CLASS-SZ/notebooks).
+
+
+## Some basic info
+
+CLASS_SZ is as fast as it gets, with full parallelization, implementation of high-accuracy neural network emulators, and Fast Fourier Transforms.
+
+CLASS_SZ has been built as an extension of Julien Lesgourgues's [CLASS](https://github.com/lesgourg/class_public) code, therefore the halo model and LSS calculations (essentially based on distances and matter clustering) are always consistent with the cosmological model computed by CLASS. We are doing our best to keep up with CLASS version updates. We are currently working on updating to CLASS v3. 
+
+CLASS_SZ is initially based on Eiichiro Komatsu’s Fortran code [SZFAST](http://wwwmpa.mpa-garching.mpg.de/~komatsu/CRL/clusters/szpowerspectrumks/).
+
+CLASS_SZ's outputs are regularly cross-checked with other CMBxLSS codes, such as:
+
+- [cosmocnc](https://github.com/inigozubeldia/cosmocnc)
+- [hmvec](https://github.com/simonsobs/hmvec/tree/master/hmvec)
+- [ccl](https://github.com/LSSTDESC/CCL)
+- [HaloGen](https://github.com/EmmanuelSchaan/HaloGen/tree/master)
+- [yxg](https://github.com/nikfilippas/yxg)
+- [halomodel_cib_tsz_cibxtsz](https://github.com/abhimaniyar/halomodel_cib_tsz_cibxtsz)
+
+
+## Using the Code
+
+The **class_sz** code is public.
+
+If you use it, please cite:
+
+- [CLASS_SZ: I Overview (Bolliet et al. 2024)](https://arxiv.org/abs/2310.18482)
+- [Projected-field kinetic Sunyaev-Zel'dovich Cross-correlations: halo model and forecasts (Bolliet et al. 2023)](https://iopscience.iop.org/article/10.1088/1475-7516/2023/03/039)
+
+If you use the emulators (fast method of class_sz, see below), please cite:
+
+- [High-accuracy emulators for observables in LCDM, Neff+LCDM, Mnu+LCDM and wCDM cosmologies (Bolliet et al. 2023)](https://inspirehep.net/literature/2638458)
+- [COSMOPOWER: emulating cosmological power spectra for accelerated Bayesian inference from next-generation surveys (Spurio Mancini et al. 2021)](https://arxiv.org/abs/2106.03846)
+
+If you use thermal SZ power spectrum and cluster counts calculations, please also consider citing:
+
+- [Including massive neutrinos in thermal Sunyaev Zeldovich power spectrum and cluster counts analyses (Bolliet et al. 2020)](https://arxiv.org/abs/1906.10359)
+- [Dark Energy from the Thermal Sunyaev Zeldovich Power Spectrum (Bolliet et al. 2017)](https://arxiv.org/abs/1712.00788)
+- [The Sunyaev-Zel'dovich angular power spectrum as a probe of cosmological parameters (Komatsu and Seljak, 2002)](https://arxiv.org/abs/astro-ph/0205468)
+
+If you use the code, please also cite the original CLASS papers (since class_sz is an extension of CLASS), e.g.,:
+
+- [CLASS I: Overview (Lesgourgues, 2011)](https://arxiv.org/abs/1104.2932)
+- [CLASS II: Approximation schemes (Blas, Lesgourgues, Tram, 2011)](http://arxiv.org/abs/1104.2933)
+
+As well as other references listed here: [http://class-code.net](http://class-code.net)
+
+
+# For developers 
+
+If you are a developer, you will need to modify the C code and the python wrapper. 
+
+CLASS_SZ functionalities are located in the files:
+
+- [**source/class_sz.c**](https://github.com/CLASS-SZ/class_sz/blob/master/source/class_sz.c) for the main CLASS_SZ functions,
+- [**tools/class_sz_tools.c**](https://github.com/CLASS-SZ/class_sz/blob/master/tools/class_sz_tools.c) for other useful routines,
+- [**source/class_sz_clustercounts.c**](https://github.com/CLASS-SZ/class_sz/blob/master/source/class_sz_clustercounts.c) for tSZ cluster counts. Since March 2024, CLASS_SZ cluster counts calculations are superseded by [cosmocnc](https://github.com/inigozubeldia/cosmocnc) ([Zubeldia & Bolliet 2024](https://arxiv.org/abs/2403.09589)).
+
+And importantly, in the python and cython files:
+
+- [**python/classy.pyx**](https://github.com/CLASS-SZ/class_sz/blob/master/python/classy.pyx) for the Python wrapper,
+- [**python/classy_szfast/classy_szfast/classy_szfast.py**](https://github.com/CLASS-SZ/class_sz/blob/master/python/classy_szfast/classy_szfast/classy_szfast.py) for the Python wrapper for the emulators,
+- [**python/classy_szfast/classy_szfast/classy_sz.py**](https://github.com/CLASS-SZ/class_sz/blob/master/python/classy_szfast/classy_szfast/classy_sz.py) for the Python wrapper for cobaya,
+- [**python/classy_szfast/classy_szfast/cosmosis_classy_szfast_interface.py**](https://github.com/CLASS-SZ/class_sz/blob/master/python/classy_szfast/classy_szfast/cosmosis_classy_szfast_interface.py) for the Python wrapper for cosmosis. 
+
+To install the C executable, so you can run the C code, you should install from source and compile:
+
+Clean up and compile:
+
+```bash
+$ git clone https://github.com/CLASS-SZ/class_sz
+$ cd class_sz
+$ make clean
+$ make -j class_sz
+$ cd python
+$ pip install -e .
+$ cd ../..
+$ git clone https://github.com/CLASS-SZ/classy_szfast
+$ cd classy_szfast
+$ pip install -e
+```
+
+The `-j` flag speeds up the compilation process by using multiple cores. This compiles 
+
+
+Then, try to run the C code with most of the power spectra output:
+
+```bash
+$ ./class_sz class_sz_test.ini
+```
+
+The `.ini` files are the parameter files.
+
+If you want to run CLASS and not do the class_sz part, you can! For example:
+
+```bash
+$ ./class_sz explanatory.ini
+```
+
+This will just run the standard CLASS code and its calculations. All depends on what output you request: if you request a class_sz observable or not.
+
+
+## Library Path Configuration
+
+It is often the case that some libraries are not found. In general, setting the following paths appropriately should solve your issues:
+
+```bash
+export LIBRARY_PATH=/Users/boris/opt/miniconda3/lib:path/to/gsl/:path/to/fftw/:$LIBRARY_PATH
+export C_INCLUDE_PATH=/Users/boris/opt/miniconda3/include/:path/to/gsl/:path/to/fftw/:$C_INCLUDE_PATH
+export DYLD_LIBRARY_PATH="/Users/boris/opt/miniconda3/lib:$DYLD_LIBRARY_PATH" # (Mac M1 users only)
+```
+
+To ensure these paths are set every time you open a terminal, you can add these lines to your `~/.bashrc` or `~/.bash_profile` file automatically using the `echo` command.
+
+For `~/.bashrc` (common for most Linux systems):
+
+```bash
+echo -e "\n# Set library paths for class_sz\nexport LIBRARY_PATH=/Users/boris/opt/miniconda3/lib:path/to/gsl/:path/to/fftw/:\$LIBRARY_PATH\nexport C_INCLUDE_PATH=/Users/boris/opt/miniconda3/include/:path/to/gsl/:path/to/fftw/:\$C_INCLUDE_PATH\nexport DYLD_LIBRARY_PATH=\"/Users/boris/opt/miniconda3/lib:\$DYLD_LIBRARY_PATH\" # (Mac M1 users only)" >> ~/.bashrc
+```
+
+To apply the changes immediately:
+
+```bash
+source ~/.bashrc
+```
+
+For `~/.bash_profile` (common for macOS):
+
+```bash
+echo -e "\n# Set library paths for class_sz\nexport LIBRARY_PATH=/path/to/your/libraries:path/to/gsl/:path/to/fftw/:\$LIBRARY_PATH\nexport C_INCLUDE_PATH=path/to/gsl/:path/to/fftw/:\$C_INCLUDE_PATH\nexport DYLD_LIBRARY_PATH=\"/path/to/your/libraries:\$DYLD_LIBRARY_PATH\" # (Mac M1 users only)" >> ~/.bash_profile
+```
+
+To apply the changes immediately:
+
+```bash
+source ~/.bash_profile
+```
+
+
+## Some Tips to Run on Computer Clusters
+
+Use module load, module show to get GSL and FFTW.
+At NERSC/Cori/Perlmutter, the code works with gsl/2.7. (There seems to be a problematic behavior during job submission with gsl/2.5.)
+
+For Monte Carlo analyses, we also recall that Mpi4py needs to be correctly installed. Follow:
+[Cobaya MPI Installation Guide](https://cobaya.readthedocs.io/en/latest/installation.html#mpi-parallelization-optional-but-encouraged).
+
+## TensorFlow on Mac M1
+
+To install the new version of CLASS_SZ, you will need TensorFlow (needed for the Cosmopower emulators). On M1/M2, make sure you have the arm64 version of conda (if not, you need to remove your entire conda and install the arm64 version for Apple Silicon).
+
+This video might be helpful: [Installing TensorFlow on M1 Mac](https://www.youtube.com/watch?v=BEUU-icPg78).
+
+Then you can follow the standard TensorFlow installation recipe for M1, e.g., [Medium Article](https://caffeinedev.medium.com/how-to-install-tensorflow-on-m1-mac-8e9b91d93706) or the [Apple Developer Forums](https://developer.apple.com/forums/thread/697846).
+
+The following two lines should fix most issues:
+
+```bash
+pip install tensorflow-metal-1.1.0
+conda install -c apple tensorflow-deps
+```
+
+## Pre M1 Mac
+
+See Makefile_preM1mac for an example makefile for older Macs (without the M1 chip). Some key points include adding paths involving libomp to LDFLAG and INCLUDES.
+In python/setup.py, you may also want to modify the extra_link_args list to contain '-lomp' instead of '-lgomp' and add the libomp library path as well to that list. 
+For example, extra_link_args=['-lomp', '-lgsl','-lfftw3','-lgslcblas', '-L/usr/local/opt/libomp/lib/'].
+
+This makefile is not maintained anymore but we keep it for reference. If you need to run class_sz on a pre-M1 Mac and have serious issues, please contact us.
