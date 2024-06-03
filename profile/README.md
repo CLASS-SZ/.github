@@ -20,7 +20,7 @@ We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
 
 You may also want to take a look at a brief summary from ([Bolliet et al 2023](https://arxiv.org/abs/2310.18482)).
 
-## Computing with classy_sz
+## Computing 
 
 ```python
 from classy_sz import Class()
