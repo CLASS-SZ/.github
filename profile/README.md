@@ -92,7 +92,7 @@ If you use the code, please also cite the original CLASS papers (since class_sz 
 As well as other references listed here: [http://class-code.net](http://class-code.net)
 
 
-# For developers 
+## For developers 
 
 If you are a developer, you will need to modify the C code and the python wrapper. 
 
