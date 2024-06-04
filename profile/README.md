@@ -10,11 +10,13 @@ The code is pip installable **(work in progress 4th june 2024, please continue t
 $ pip install classy_sz
 ```
 
-If this crashes, check [here](#library-path-configuration). 
+Tip 1: If this crashes, check [here](#library-path-configuration). 
 
-If it still crashes and you are a Mac M1 user check [here](#tensorflow-on-mac-m1). 
+Tip 2: If it still crashes and you are a Mac M1 user check [here](#tensorflow-on-mac-m1). 
 
-If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
+Tip 3: If it still crashes try to install from [source](https://github.com/CLASS-SZ/class_sz) (use tip 1 and/or 2 from above if needed)
+
+Tip 4: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
 
 We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
 
