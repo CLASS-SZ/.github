@@ -136,17 +136,13 @@ Clean up and compile:
 
 ```bash
 $ git clone https://github.com/CLASS-SZ/class_sz
-$ cd class_sz
+$ cd class-sz/python
+$ git clone https://github.com/CLASS-SZ/classy_szfast
+$ cd ../..
 $ chmod +x select_makefile.sh
 $ ./select_makefile.sh
 $ make clean
-$ make -j class_sz
-$ cd python
-$ pip install -e .
-$ cd ../..
-$ git clone https://github.com/CLASS-SZ/classy_szfast
-$ cd classy_szfast
-$ pip install -e .
+$ make -j 
 ```
 
 The `-j` flag speeds up the compilation process by using multiple cores. This compiles 
