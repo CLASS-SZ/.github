@@ -20,15 +20,22 @@ We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
 
 You may also want to take a look at a brief summary from ([Bolliet et al 2023](https://arxiv.org/abs/2310.18482)).
 
-You may want to create an environment for your project:
+You may want to create a conda environment for your project:
 
 ```bash
 $ mkdir my_project
 $ cd my_project
-$ conda create --name class_sz_py311 python=3.11
+$ conda create --name class_sz
 $ conda activate class_sz
 ```
 
+Or a virtual environment: 
+```bash
+$ module load python 
+$ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
+$ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
+$ source $VENVDIR/name-of-your-venv/bin/activate
+```
 
 
 
