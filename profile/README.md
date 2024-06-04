@@ -31,7 +31,7 @@ $ conda create  --name class_sz_env python=3.10
 $ conda activate class_sz_env
 ```
 
-Or a virtual environment: 
+Or a virtual environment (preferred on some computing clusters, e.g., at Flatiron): 
 ```bash
 $ module load python 
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
