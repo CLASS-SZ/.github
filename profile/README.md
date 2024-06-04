@@ -137,6 +137,8 @@ Clean up and compile:
 ```bash
 $ git clone https://github.com/CLASS-SZ/class_sz
 $ cd class_sz
+$ chmod +x select_makefile.sh
+$ ./select_makefile.sh
 $ make clean
 $ make -j class_sz
 $ cd python
