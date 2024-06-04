@@ -27,7 +27,7 @@ You may want to create a conda environment for your project:
 ```bash
 $ mkdir my_project
 $ cd my_project
-$ conda create  --prefix /path/to/my_project python=3.10 --name class_sz_env
+$ conda create  --prefix /path/to/my_project --name class_sz_env python=3.10 
 $ conda activate class_sz_env
 ```
 
