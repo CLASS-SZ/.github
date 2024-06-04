@@ -148,7 +148,9 @@ $ cd ..
 $ chmod +x select_makefile.sh
 $ ./select_makefile.sh
 $ make clean
-$ make -j 
+$ make -j
+$ export PYTHONPATH=$(pwd/python):$PYTHONPATH
+$ export PYTHONPATH=$(pwd/python/classy_szfast):$PYTHONPATH
 ```
 
 The `-j` flag speeds up the compilation process by using multiple cores. This compiles 
