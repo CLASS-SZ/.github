@@ -144,7 +144,7 @@ Clean up and compile:
 $ git clone https://github.com/CLASS-SZ/class_sz
 $ cd class_sz/class-sz/python
 $ git clone https://github.com/CLASS-SZ/classy_szfast
-$ cd ../..
+$ cd ..
 $ chmod +x select_makefile.sh
 $ ./select_makefile.sh
 $ make clean
