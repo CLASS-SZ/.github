@@ -27,8 +27,14 @@ You may want to create a conda environment for your project:
 ```bash
 $ mkdir my_project
 $ cd my_project
-$ conda create --name class_sz
+$ conda create --name class_sz_env
 $ conda activate class_sz
+```
+
+If you want to work with a specific python version, e.g., 3.10, you can do:
+
+```bash
+$ conda create --name class_sz_env python=3.10
 ```
 
 Or a virtual environment: 
