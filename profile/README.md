@@ -143,9 +143,12 @@ $ chmod +x select_makefile.sh
 $ ./select_makefile.sh
 $ make clean
 $ make -j
-$ source source set_class_sz_env.sh
-$ export PYTHONPATH=$(pwd)/python:$PYTHONPATH
-$ export PYTHONPATH=$(pwd)/python/classy_szfast:$PYTHONPATH
+$ source set_class_sz_env.sh
+```
+
+if you are a mac M1 user you likely need to do: 
+```bash
+$ conda install -c apple tensorflow-deps
 ```
 
 The `-j` flag speeds up the compilation process by using multiple cores. This compiles 
