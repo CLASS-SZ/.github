@@ -142,7 +142,7 @@ Clean up and compile:
 
 ```bash
 $ git clone https://github.com/CLASS-SZ/class_sz
-$ cd class-sz/python
+$ cd class_sz/class-sz/python
 $ git clone https://github.com/CLASS-SZ/classy_szfast
 $ cd ../..
 $ chmod +x select_makefile.sh
