@@ -22,19 +22,13 @@ We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
 
 You may also want to take a look at a brief summary from ([Bolliet et al 2023](https://arxiv.org/abs/2310.18482)).
 
-You may want to create a conda environment for your project:
+You may want to create a conda environment for your project (e.g., with python 3.10):
 
 ```bash
 $ mkdir my_project
 $ cd my_project
-$ conda create  --name class_sz_env 
+$ conda create  --name class_sz_env python=3.10
 $ conda activate class_sz_env
-```
-
-If you want to work with a specific python version, e.g., 3.10, you can do:
-
-```bash
-$ conda create --name class_sz_env python=3.10
 ```
 
 Or a virtual environment: 
@@ -149,6 +143,7 @@ $ chmod +x select_makefile.sh
 $ ./select_makefile.sh
 $ make clean
 $ make -j
+$ source source set_class_sz_env.sh
 $ export PYTHONPATH=$(pwd)/python:$PYTHONPATH
 $ export PYTHONPATH=$(pwd)/python/classy_szfast:$PYTHONPATH
 ```
