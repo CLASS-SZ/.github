@@ -2,7 +2,7 @@
 
 Cosmic Linear Anisotropy Solving System with Machine Learning Accelerated and Accurate CMB, LSS, and Halo Model Observables Computations. 
 
-To install the code, copy paste into your terminal: 
+To install the code (copy and paste into your terminal): 
 
 ```bash
 pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && cd class_sz && pip install -e . && source set_class_sz_env.sh
