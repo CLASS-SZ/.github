@@ -224,10 +224,9 @@ This video might be helpful: [Installing TensorFlow on M1 Mac](https://www.youtu
 
 Then you can follow the standard TensorFlow installation recipe for M1, e.g., [Medium Article](https://caffeinedev.medium.com/how-to-install-tensorflow-on-m1-mac-8e9b91d93706) or the [Apple Developer Forums](https://developer.apple.com/forums/thread/697846).
 
-The following two lines should fix most issues:
+The following line should fix most issues:
 
 ```bash
-pip install tensorflow-metal-1.1.0
 conda install -c apple tensorflow-deps
 ```
 
