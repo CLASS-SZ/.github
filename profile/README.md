@@ -30,7 +30,7 @@ We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
 
 You may also want to take a look at a brief summary from ([B. Bolliet, A. Kusiak, F. McCarthy, et al 2023](https://arxiv.org/abs/2310.18482)).
 
-
+Looking to modify the code, or to understand how it works? check [here](#for-developers). We are working on re-factoring the code so it becomes more modular and user friendly. Stay tuned!
 
 
 ## Computing 
@@ -147,7 +147,7 @@ If you are a developer, you will need to modify the C code and the python wrappe
 
 CLASS_SZ functionalities are located in the files:
 
-- [**source/class_sz.c**](https://github.com/CLASS-SZ/class_sz/blob/master/class-sz/source/class_sz.c)) for the main CLASS_SZ functions,
+- [**source/class_sz.c**](https://github.com/CLASS-SZ/class_sz/blob/master/class-sz/source/class_sz.c) for the main CLASS_SZ functions,
 - [**tools/class_sz_tools.c**](https://github.com/CLASS-SZ/class_sz/blob/master/class-sz/tools/class_sz_tools.c) for other useful routines,
 - [**source/class_sz_clustercounts.c**](https://github.com/CLASS-SZ/class_sz/blob/master/class-sz/source/class_sz_clustercounts.c) for tSZ cluster counts. Since March 2024, CLASS_SZ cluster counts calculations are superseded by [cosmocnc](https://github.com/inigozubeldia/cosmocnc) ([Zubeldia & Bolliet 2024](https://arxiv.org/abs/2403.09589)).
 
