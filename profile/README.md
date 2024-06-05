@@ -41,7 +41,7 @@ class_sz.set({'output':'tSZ_1h, tSZ_gal_1h,tSZ_gal_1h'}) # ask for cross-correla
 class_sz.compute()
 ```
 
-Have a look at the notebooks [CLASS_SZ Notebooks](https://github.com/CLASS-SZ/notebooks). There are loads of examples. 
+Have a look at the [notebooks](https://github.com/CLASS-SZ/notebooks), there are loads of examples. 
 
 ## Accelerated Computations
 
