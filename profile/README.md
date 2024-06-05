@@ -2,8 +2,6 @@
 
 Cosmic Linear Anisotropy Solving System with Machine Learning Accelerated and Accurate CMB, LSS, and Halo Model Observables Computations. 
 
-To install/run CLASS_SZ on the fly, check the [colab notebook](https://colab.research.google.com/drive/1AULgG4ZLLG1YXRI86L54-hpjWyl1X-8c?usp=sharing) **(work in progress 4th june 2024, please go to [this method](#for-developers) while we are working on this)**.
-
 To install the code, copy paste into your terminal: 
 
 ```bash
