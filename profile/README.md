@@ -23,6 +23,7 @@ $ module load python
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
 $ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
 $ source $VENVDIR/name-of-your-venv/bin/activate
+$ pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && cd class_sz && pip install -e . && source set_class_sz_env.sh
 ```
 
 We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
