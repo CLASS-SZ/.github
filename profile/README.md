@@ -7,7 +7,7 @@ To install/run CLASS_SZ on the fly, check the [colab notebook](https://colab.res
 To install the code, copy paste into your terminal: 
 
 ```bash
-$ git clone https://github.com/CLASS-SZ/class_sz && cd class_sz && pip install -e . && source set_class_sz_env.sh
+$ pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && cd class_sz && pip install -e . && source set_class_sz_env.sh
 ```
 
 Tip 1: If this crashes, check [here](#library-path-configuration). 
