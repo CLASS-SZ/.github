@@ -120,7 +120,7 @@ And importantly, in the python and cython files:
 
 - [**python/classy.pyx**](https://github.com/CLASS-SZ/class_sz/blob/master/python/classy.pyx) for the Python wrapper,
 - [**classy_szfast/classy_szfast.py**](https://github.com/CLASS-SZ/classy_szfast/blob/master/classy_szfast/classy_szfast.py) for the Python wrapper for the emulators,
-- [**classy_szfast/classy_sz.py**](https://github.com/CLASS-SZ/class_sz/blob/master/classy_szfast/classy_sz.py) for the Python wrapper for cobaya,
+- [**classy_szfast/classy_sz.py**](https://github.com/CLASS-SZ/classy_szfast/blob/master/classy_szfast/classy_sz.py) for the Python wrapper for cobaya,
 - [**classy_szfast/cosmosis_classy_szfast_interface.py**](https://github.com/CLASS-SZ/classy_szfast/blob/master/python/classy_szfast/cosmosis_classy_szfast_interface.py) for the Python wrapper for cosmosis. 
 
 To install the C executable, so you can run the C code, you should install from source and compile:
