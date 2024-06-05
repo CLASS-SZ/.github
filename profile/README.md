@@ -57,19 +57,18 @@ to:
 class_sz.compute_class_szfast()
 ```
 
-In a bit more details. Say you are interested in CMB cls and matter pk.
+In a bit more details. Say you are interested in CMB cls.
 
 ```python
 
 cosmo_params = {
 'omega_b': 0.02242,
 'omega_cdm':  0.11933,
-'H0': 67.66, # use H0 because this is what is used by the emulators.
+'H0': 67.66, 
 'tau_reio': 0.0561,
 'ln10^{10}A_s': 3.047,
 'n_s': 0.9665,
 
-'k_pivot': 0.05,
 'N_ncdm': 1,
 'N_ur': 2.0328,
 'm_ncdm': 0.06    
@@ -83,7 +82,7 @@ class_sz.set({
 
 class_sz.compute_class_szfast()
 
-lensed_cls = M.lensed_cl()
+lensed_cls = class_sz.lensed_cl()
 l_fast = lensed_cls['ell']
 cl_tt_fast = lensed_cls['tt']
 cl_ee_fast = lensed_cls['ee']
@@ -92,7 +91,7 @@ cl_pp_fast = lensed_cls['pp']
 ```
 
 
-Sse [notebooks](https://github.com/CLASS-SZ/notebooks) for more details.
+Sse [notebooks](https://github.com/CLASS-SZ/notebooks) for more details, [this one](https://github.com/CLASS-SZ/notebooks/blob/main/class_sz_cmb_cls.ipynb) for cmb cls and [this one](https://github.com/CLASS-SZ/notebooks/blob/main/class_sz_matterpowerspectrum_at_z.ipynb) for matter pk.
 
 
 ## Some basic info
