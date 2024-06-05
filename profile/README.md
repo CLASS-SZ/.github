@@ -18,18 +18,7 @@ Tip 3: If it still crashes try to install from [source](#for-developers) (use ti
 
 Tip 4: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
 
-We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
-
-You may also want to take a look at a brief summary from ([Bolliet et al 2023](https://arxiv.org/abs/2310.18482)).
-
-You may want to create a conda environment for your project (e.g., with python 3.10):
-
-```bash
-$ mkdir my_project
-$ cd my_project
-$ conda create  --name class_sz_env python=3.10
-$ conda activate class_sz_env
-```
+Tip 5: We  strongly encourage to use python virtual environment:
 
 Or a virtual environment (preferred on some computing clusters, e.g., at Flatiron): 
 ```bash
@@ -38,6 +27,11 @@ $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
 $ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
 $ source $VENVDIR/name-of-your-venv/bin/activate
 ```
+
+We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
+
+You may also want to take a look at a brief summary from ([Bolliet et al 2023](https://arxiv.org/abs/2310.18482)).
+
 
 
 
