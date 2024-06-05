@@ -35,9 +35,9 @@ You may also want to take a look at a brief summary from ([Bolliet et al 2023](h
 ## Computing 
 
 ```python
-from classy_sz import Class()
+from classy_sz import Class
 class_sz = Class()
-class_sz.set({'output':'tSZ_1h, tSZ_gal_1h',tSZ_gal_1h'}) # ask for cross-correlations, tsz, etc.
+class_sz.set({'output':'tSZ_1h, tSZ_gal_1h,tSZ_gal_1h'}) # ask for cross-correlations, tsz, etc.
 class_sz.compute()
 ```
 
