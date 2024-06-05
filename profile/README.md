@@ -87,18 +87,18 @@ If you use it, please cite:
 - [CLASS_SZ: I Overview (Bolliet et al. 2024)](https://arxiv.org/abs/2310.18482)
 - [Projected-field kinetic Sunyaev-Zel'dovich Cross-correlations: halo model and forecasts (Bolliet et al. 2023)](https://iopscience.iop.org/article/10.1088/1475-7516/2023/03/039)
 
-If you use the emulators (fast method of class_sz, see below), please cite:
+If you use accelerated computations, please cite:
 
 - [High-accuracy emulators for observables in LCDM, Neff+LCDM, Mnu+LCDM and wCDM cosmologies (Bolliet et al. 2023)](https://inspirehep.net/literature/2638458)
 - [COSMOPOWER: emulating cosmological power spectra for accelerated Bayesian inference from next-generation surveys (Spurio Mancini et al. 2021)](https://arxiv.org/abs/2106.03846)
 
-If you use thermal SZ power spectrum and cluster counts calculations, please also consider citing:
+If you use thermal SZ power spectrum and cluster counts calculations, please cite:
 
 - [Including massive neutrinos in thermal Sunyaev Zeldovich power spectrum and cluster counts analyses (Bolliet et al. 2020)](https://arxiv.org/abs/1906.10359)
 - [Dark Energy from the Thermal Sunyaev Zeldovich Power Spectrum (Bolliet et al. 2017)](https://arxiv.org/abs/1712.00788)
 - [The Sunyaev-Zel'dovich angular power spectrum as a probe of cosmological parameters (Komatsu and Seljak, 2002)](https://arxiv.org/abs/astro-ph/0205468)
 
-If you use the code, please also cite the original CLASS papers (since class_sz is an extension of CLASS), e.g.,:
+In all these cases, please also cite the original CLASS papers:
 
 - [CLASS I: Overview (Lesgourgues, 2011)](https://arxiv.org/abs/1104.2932)
 - [CLASS II: Approximation schemes (Blas, Lesgourgues, Tram, 2011)](http://arxiv.org/abs/1104.2933)
