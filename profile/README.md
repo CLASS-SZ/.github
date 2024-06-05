@@ -132,20 +132,19 @@ $ git clone https://github.com/CLASS-SZ/classy_szfast
 $ cd ..
 $ chmod +x select_makefile.sh
 $ ./select_makefile.sh
+$ chmod +x download_emulators
+$ ./download_emulators
 $ make clean
 $ make -j
+$ cd ..
 $ source set_class_sz_env.sh
 ```
 
-if you are a mac M1 user you likely need to do: 
-```bash
-$ conda install -c apple tensorflow-deps
-```
+The `-j` flag speeds up the compilation process by using multiple cores. 
 
-The `-j` flag speeds up the compilation process by using multiple cores. This compiles 
+If this crashes, check the tips at the top of the page.
 
-
-Then, try to run the C code with most of the power spectra output:
+If it installes, run the C code with many power spectra output:
 
 ```bash
 $ ./class_sz class_sz_test.ini
@@ -162,14 +161,14 @@ $ ./class_sz explanatory.ini
 This will just run the standard CLASS code and its calculations. All depends on what output you request: if you request a class_sz observable or not.
 
 
-## Library Path Configuration
+## Library and Include Path Configuration
 
 It is often the case that some libraries are not found. In general, setting the following paths appropriately should solve your issues:
 
 ```bash
-export LIBRARY_PATH=/Users/boris/opt/miniconda3/lib:path/to/gsl/:path/to/fftw/:$LIBRARY_PATH
-export C_INCLUDE_PATH=/Users/boris/opt/miniconda3/include/:path/to/gsl/:path/to/fftw/:$C_INCLUDE_PATH
-export DYLD_LIBRARY_PATH="/Users/boris/opt/miniconda3/lib:$DYLD_LIBRARY_PATH" # (Mac M1 users only)
+export LIBRARY_PATH=/path/to/your/libs:path/to/gsl:path/to/fftw:$LIBRARY_PATH
+export C_INCLUDE_PATH=/path/to/your/includes:path/to/gsl:path/to/fftw:$C_INCLUDE_PATH
+export DYLD_LIBRARY_PATH="/path/to/your/libs:$DYLD_LIBRARY_PATH" # (Mac M1 users only)
 ```
 
 To ensure these paths are set every time you open a terminal, you can add these lines to your `~/.bashrc` or `~/.bash_profile` file automatically using the `echo` command.
@@ -177,7 +176,7 @@ To ensure these paths are set every time you open a terminal, you can add these 
 For `~/.bashrc` (common for most Linux systems):
 
 ```bash
-echo -e "\n# Set library paths for class_sz\nexport LIBRARY_PATH=/Users/boris/opt/miniconda3/lib:path/to/gsl/:path/to/fftw/:\$LIBRARY_PATH\nexport C_INCLUDE_PATH=/Users/boris/opt/miniconda3/include/:path/to/gsl/:path/to/fftw/:\$C_INCLUDE_PATH\nexport DYLD_LIBRARY_PATH=\"/Users/boris/opt/miniconda3/lib:\$DYLD_LIBRARY_PATH\" # (Mac M1 users only)" >> ~/.bashrc
+echo -e "\n# Set library paths for class_sz\nexport LIBRARY_PATH=/path/to/your/libs:path/to/gsl/:path/to/fftw/:\$LIBRARY_PATH\nexport C_INCLUDE_PATH=/path/to/your/includes:path/to/gsl:path/to/fftw:\$C_INCLUDE_PATH\nexport DYLD_LIBRARY_PATH=\"/path/to/your/libs:\$DYLD_LIBRARY_PATH\" # (Mac M1 users only)" >> ~/.bashrc
 ```
 
 To apply the changes immediately:
