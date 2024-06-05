@@ -27,7 +27,7 @@ $ source $VENVDIR/name-of-your-venv/bin/activate
 
 We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
 
-You may also want to take a look at a brief summary from ([Bolliet, Kusiak, McCarthy, et al 2023](https://arxiv.org/abs/2310.18482)).
+You may also want to take a look at a brief summary from ([B. Bolliet, A. Kusiak, F. McCarthy et al 2023](https://arxiv.org/abs/2310.18482)).
 
 
 
