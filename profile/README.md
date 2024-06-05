@@ -16,7 +16,7 @@ Tip 3: If it still crashes try to install from [source](#for-developers) (use ti
 
 Tip 4: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
 
-Tip 5: We  strongly encourage to use python virtual environment:
+Tip 5: We  strongly encourage to use a python virtual environment:
 
 ```bash
 $ module load python 
