@@ -18,7 +18,6 @@ Tip 4: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz
 
 Tip 5: We  strongly encourage to use python virtual environment:
 
-Or a virtual environment (preferred on some computing clusters, e.g., at Flatiron): 
 ```bash
 $ module load python 
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
