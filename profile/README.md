@@ -36,8 +36,8 @@ You may also want to take a look at a brief summary from ([B. Bolliet, A. Kusiak
 ## Computing 
 
 ```python
-from classy_sz import Class
-class_sz = Class()
+from classy_sz import Class as Class_sz
+class_sz = Class_sz()
 class_sz.set({'output':'tSZ_1h, tSZ_gal_1h,tSZ_gal_1h'}) # ask for cross-correlations, tsz, etc.
 class_sz.compute()
 ```
@@ -60,6 +60,7 @@ class_sz.compute_class_szfast()
 In a bit more details, say you are interested in CMB $C_\ell$'s:
 
 ```python
+from classy_sz import Class as Class_sz
 
 cosmo_params = {
 'omega_b': 0.02242,
@@ -73,7 +74,7 @@ cosmo_params = {
 'N_ur': 2.0328,
 'm_ncdm': 0.06    
 }
-class_sz = Class()
+class_sz = Class_sz()
 class_sz.set(cosmo_params)
 class_sz.set({
 'output':'tCl,lCl,pCl',
