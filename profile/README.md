@@ -56,7 +56,7 @@ to:
 ```python
 class_sz.compute_class_szfast()
 ```
-There are many examples in the notebooks on how to use class_szfast. See [CLASS_SZ Notebooks](https://github.com/CLASS-SZ/notebooks).
+There are many examples in the notebooks on how to use class_szfast (see [notebooks](https://github.com/CLASS-SZ/notebooks) for more details).
 
 
 ## Some basic info
