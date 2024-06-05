@@ -28,7 +28,7 @@ $ pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz &&
 
 We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
 
-You may also want to take a look at a brief summary from ([B. Bolliet, A. Kusiak, F. McCarthy et al 2023](https://arxiv.org/abs/2310.18482)).
+You may also want to take a look at a brief summary from ([B. Bolliet, A. Kusiak, F. McCarthy, et al 2023](https://arxiv.org/abs/2310.18482)).
 
 
 
