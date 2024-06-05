@@ -57,7 +57,7 @@ to:
 class_sz.compute_class_szfast()
 ```
 
-In a bit more details. Say you are interested in CMB cls.
+In a bit more details, say you are interested in CMB $C_\ell$'s:
 
 ```python
 
@@ -77,7 +77,7 @@ class_sz = Class()
 class_sz.set(cosmo_params)
 class_sz.set({
 'output':'tCl,lCl,pCl',
-'skip_background_and_thermo': 1, # do you want exact solution for background? yes: 1, no: 0, if no you can access background quantities via emulators.
+'skip_background_and_thermo': 1, # do you want exact solution for background? yes: 1, no: 0 (if "no" you can access background quantities via emulators).
 })
 
 class_sz.compute_class_szfast()
@@ -91,7 +91,7 @@ cl_pp_fast = lensed_cls['pp']
 ```
 
 
-Sse [notebooks](https://github.com/CLASS-SZ/notebooks) for more details, [this one](https://github.com/CLASS-SZ/notebooks/blob/main/class_sz_cmb_cls.ipynb) for cmb cls and [this one](https://github.com/CLASS-SZ/notebooks/blob/main/class_sz_matterpowerspectrum_at_z.ipynb) for matter pk.
+Sse [notebooks](https://github.com/CLASS-SZ/notebooks) for more details, [this one](https://github.com/CLASS-SZ/notebooks/blob/main/class_sz_cmb_cls.ipynb) for cmb $C_\ell$'s and [this one](https://github.com/CLASS-SZ/notebooks/blob/main/class_sz_matterpowerspectrum_at_z.ipynb) for matter $P(k)$.
 
 
 ## Some basic info
