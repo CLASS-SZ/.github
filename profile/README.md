@@ -289,6 +289,10 @@ pip install -U --force-reinstall charset-normalizer
 python3 -c 'import cosmopower as cp'
 ```
 
+And then install class_sz (see top of page).
+
+(Thanks to V. Irsic and R. de Belsunce for this.) 
+
 ## Pre M1 Mac
 
 See Makefile_preM1mac for an example makefile for older Macs (without the M1 chip). Some key points include adding paths involving libomp to LDFLAG and INCLUDES.
