@@ -8,15 +8,17 @@ To install the code (copy and paste into your terminal):
 pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && cd class_sz && pip install -e . && source set_class_sz_env.sh
 ```
 
-- Tip 1: If this crashes, check [here](#library-and-include-path-configuration) (this is **important**). 
+- Tip 1: Ccheck [here](#library-and-include-path-configuration) (this is **important**). 
 
-- Tip 2: If it still crashes and you are a Mac M1 user check [here](#tensorflow-on-mac-m1). 
+- Tip 2: Are you a Mac M1 user? Check [here](#tensorflow-on-mac-m1). 
 
-- Tip 3: If it still crashes try to install from [source](#for-developers) (use tip 1 and/or 2 from above if needed).
+- Tip 3: Try to install from [source](#for-developers) (use tip 1 and/or 2 from above if needed).
 
-- Tip 4: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
+- Tip 4: Does the problem seem to be related  to tensorflow or cosmopower? Check [here](#tips-for-cosmopower-installation)
 
-- Tip 5: We  strongly encourage to use a python virtual environment:
+- Tip 5: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
+
+- Tip 6: We  strongly encourage to use a python virtual environment:
 
 ```bash
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
@@ -242,6 +244,13 @@ At NERSC/Cori/Perlmutter, the code works with gsl/2.7. (There seems to be a prob
 For Monte Carlo analyses, we also recall that Mpi4py needs to be correctly installed. Follow:
 [Cobaya MPI Installation Guide](https://cobaya.readthedocs.io/en/latest/installation.html#mpi-parallelization-optional-but-encouraged).
 
+At NERSC, these commands may help for mpi4py:
+
+```bash
+MPICC="cc -shared" pip install --force-reinstall --no-cache-dir --no-binary=mpi4py mpi4py
+```
+
+
 ## TensorFlow on Mac M1
 
 To install the new version of CLASS_SZ, you will need TensorFlow (needed for the Cosmopower emulators). On M1/M2, make sure you have the arm64 version of conda (if not, you need to remove your entire conda and install the arm64 version for Apple Silicon).
@@ -254,6 +263,30 @@ The following line should fix most issues:
 
 ```bash
 conda install -c apple tensorflow-deps
+```
+
+## Tips for cosmopower installation
+
+If issues seem to be related to cosmopower, you can try the following commands before installing class_sz:
+
+```bash
+module load python
+python3 -m venv /path/to/your/venv
+source /path/to/your/venv/bin/activate
+#
+pip install --upgrade pip
+#
+module swap PrgEnv-${PE_ENV,,} PrgEnv-gnu
+MPICC="cc -shared" pip install --force-reinstall --no-cache-dir --no-binary=mpi4py mpi4py
+#
+pip install numpy scipy
+# these below are probably not needed for cosmopower, but we keep them here as they may solve dependicies.
+pip install healpy camb
+pip install astropy h5py setuptools "iminuit>=2.0.0" cachetools matplotlib
+pip install hankl
+pip install tf-keras cosmopower mcfit
+pip install -U --force-reinstall charset-normalizer
+python3 -c 'import cosmopower as cp'
 ```
 
 ## Pre M1 Mac
