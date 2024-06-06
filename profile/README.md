@@ -19,7 +19,6 @@ pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && c
 - Tip 5: We  strongly encourage to use a python virtual environment:
 
 ```bash
-$ module load python 
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
 $ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
 $ source $VENVDIR/name-of-your-venv/bin/activate
