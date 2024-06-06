@@ -21,6 +21,7 @@ pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && c
 - Tip 6: We  strongly encourage to use a python virtual environment:
 
 ```bash
+$ module load python # if you are on a computing cluster
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
 $ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
 $ source $VENVDIR/name-of-your-venv/bin/activate
@@ -262,7 +263,7 @@ Then you can follow the standard TensorFlow installation recipe for M1, e.g., [M
 The following line should fix most issues:
 
 ```bash
-conda install -c apple tensorflow-deps
+$ conda install -c apple tensorflow-deps
 ```
 
 ## Tips for cosmopower installation
@@ -270,23 +271,23 @@ conda install -c apple tensorflow-deps
 If issues seem to be related to cosmopower, you can try the following commands before installing class_sz:
 
 ```bash
-module load python
-python3 -m venv /path/to/your/venv
-source /path/to/your/venv/bin/activate
+$ module load python
+$ python3 -m venv /path/to/your/venv
+$ source /path/to/your/venv/bin/activate
 #
-pip install --upgrade pip
+$ pip install --upgrade pip
 #
-module swap PrgEnv-${PE_ENV,,} PrgEnv-gnu
-MPICC="cc -shared" pip install --force-reinstall --no-cache-dir --no-binary=mpi4py mpi4py
+$ module swap PrgEnv-${PE_ENV,,} PrgEnv-gnu
+$ MPICC="cc -shared" pip install --force-reinstall --no-cache-dir --no-binary=mpi4py mpi4py
 #
-pip install numpy scipy
+$ pip install numpy scipy
 # these below are probably not needed for cosmopower, but we keep them here as they may solve dependicies.
-pip install healpy camb
-pip install astropy h5py setuptools "iminuit>=2.0.0" cachetools matplotlib
-pip install hankl
-pip install tf-keras cosmopower mcfit
-pip install -U --force-reinstall charset-normalizer
-python3 -c 'import cosmopower as cp'
+$ pip install healpy camb
+$ pip install astropy h5py setuptools "iminuit>=2.0.0" cachetools matplotlib
+$ pip install hankl
+$ pip install tf-keras cosmopower mcfit
+$ pip install -U --force-reinstall charset-normalizer
+$ python3 -c 'import cosmopower as cp'
 ```
 
 And then install class_sz (see top of page).
