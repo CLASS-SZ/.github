@@ -8,7 +8,7 @@ To install the code (copy and paste into your terminal):
 pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && cd class_sz && pip install -e . && source set_class_sz_env.sh
 ```
 
-- Tip 1: Ccheck [here](#library-and-include-path-configuration) (this is **important**). 
+- Tip 1: Check [here](#library-and-include-path-configuration) (this is **important**). 
 
 - Tip 2: Are you a Mac M1 user? Check [here](#tensorflow-on-mac-m1). 
 
