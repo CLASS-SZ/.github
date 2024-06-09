@@ -175,8 +175,10 @@ $ chmod +x download_emulators.sh
 $ ./download_emulators.sh
 $ make clean
 $ make -j
+$ export PYTHONPATH=$(pwd)/python/classy_szfast:$PYTHONPATH
 $ cd ..
 $ source set_class_sz_env.sh
+
 ```
 
 The `-j` flag speeds up the compilation process by using multiple cores. 
