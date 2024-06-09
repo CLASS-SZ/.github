@@ -171,8 +171,8 @@ $ git clone https://github.com/CLASS-SZ/classy_szfast
 $ cd ..
 $ chmod +x select_makefile.sh
 $ ./select_makefile.sh
-$ chmod +x download_emulators
-$ ./download_emulators
+$ chmod +x download_emulators.sh
+$ ./download_emulators.sh
 $ make clean
 $ make -j
 $ cd ..
