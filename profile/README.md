@@ -94,7 +94,7 @@ cl_pp_fast = lensed_cls['pp']
 ```
 
 
-Sse [notebooks](https://github.com/CLASS-SZ/notebooks) for more details, [this one](https://github.com/CLASS-SZ/notebooks/blob/main/class_sz_cmb_cls.ipynb) for cmb $C_\ell$'s and [this one](https://github.com/CLASS-SZ/notebooks/blob/main/class_sz_matterpowerspectrum_at_z.ipynb) for matter $P(k)$.
+Sse these [notebooks](https://github.com/CLASS-SZ/notebooks/tree/main/classy_szfast) to get started. 
 
 
 ## Some basic info
