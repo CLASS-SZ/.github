@@ -48,7 +48,9 @@ Have a look at the [notebooks](https://github.com/CLASS-SZ/notebooks), there are
 
 ## Accelerated Computations
 
-To run the emulator-based computations, simply change:
+See these [notebooks](https://github.com/CLASS-SZ/notebooks/tree/main/classy_szfast) to get started. 
+
+To run the emulator-based computations, the idea is to change:
 
 ```python
 class_sz.compute()
@@ -80,7 +82,7 @@ class_sz = Class_sz()
 class_sz.set(cosmo_params)
 class_sz.set({
 'output':'tCl,lCl,pCl',
-'skip_background_and_thermo': 1, # do you want exact solution for background? yes: 1, no: 0 (if "no" you can access background quantities via emulators).
+'skip_background_and_thermo': 1, # do you want exact solution for background? yes: 1, no: 0 (if "no" you can access exact background quantities via emulators).
 })
 
 class_sz.compute_class_szfast()
@@ -92,10 +94,6 @@ cl_ee_fast = lensed_cls['ee']
 cl_te_fast = lensed_cls['te']
 cl_pp_fast = lensed_cls['pp']
 ```
-
-
-Sse these [notebooks](https://github.com/CLASS-SZ/notebooks/tree/main/classy_szfast) to get started. 
-
 
 ## Some basic info
 
