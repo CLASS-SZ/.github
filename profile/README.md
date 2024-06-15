@@ -37,6 +37,10 @@ Looking to modify the code, or to understand how it works? check [here](#for-dev
 
 ## Computing 
 
+Have a look at the [notebooks](https://github.com/CLASS-SZ/notebooks), there are loads of examples. 
+
+The idea is: 
+
 ```python
 from classy_sz import Class as Class_sz
 class_sz = Class_sz()
@@ -44,7 +48,7 @@ class_sz.set({'output':'tSZ_1h, tSZ_gal_1h,tSZ_gal_1h'}) # ask for cross-correla
 class_sz.compute()
 ```
 
-Have a look at the [notebooks](https://github.com/CLASS-SZ/notebooks), there are loads of examples. 
+
 
 ## Accelerated Computations
 
