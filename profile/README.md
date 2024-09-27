@@ -25,7 +25,8 @@ $ module load python # if you are on a computing cluster
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
 $ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
 $ source $VENVDIR/name-of-your-venv/bin/activate
-$ pip install classy_sz
+$ python
+>>> pip install classy_sz
 ```
 
 We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
