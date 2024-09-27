@@ -7,6 +7,12 @@ To install the code do:
 ```python
 pip install classy_sz
 ```
+This will also install O(1GB) of tensorflow files for the neural nets emulators, by default in your home directory.  If you are working on a computing cluster, you probably dont want that. 
+To specify where you want too store the neural nets data do: 
+
+```bash
+export PATH_TO_COSMOPOWER_ORGANIZATION=/where/you/want/to/store/emulators/data
+```
 
 - Tip 1: Check [here](#library-and-include-path-configuration) (this is **important**). 
 
@@ -18,7 +24,7 @@ pip install classy_sz
 
 - Tip 5: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
 
-- Tip 6: We  strongly encourage to use a python virtual environment:
+- Tip 6: **We  strongly encourage to use a python virtual environment**:
 
 ```bash
 $ module load python # if you are on a computing cluster
