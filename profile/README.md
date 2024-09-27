@@ -7,12 +7,43 @@ To install the code do:
 ```python
 pip install classy_sz
 ```
-This will also install O(1GB) of tensorflow files for the neural nets emulators, by default in your home directory.  If you are working on a computing cluster, you probably dont want that. 
-To specify where you want too store the neural nets data do: 
+
+By default, the neural nets emulators (~1GB of files) will be installed in your home directory. If you're working on a computing cluster or prefer to store the data elsewhere, you can specify a custom directory.
+
+To specify where you want to store the neural nets data, run the following command in your terminal **before** installing the package:
 
 ```bash
-export PATH_TO_COSMOPOWER_ORGANIZATION=/where/you/want/to/store/emulators/data
+export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data
 ```
+
+This command sets the `PATH_TO_COSMOPOWER_ORGANIZATION` variable for the current session.
+
+To ensure this variable is set every time you open a terminal, you can add this line to your `~/.bashrc` or `~/.bash_profile` file automatically using the `echo` command.
+
+For `~/.bashrc` (common for most Linux systems):
+```bash
+echo -e "\n# Set path for cosmopower organization data\nexport PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc
+```
+
+To apply the changes immediately:
+```bash
+source ~/.bashrc
+```
+
+For `~/.bash_profile` (common for macOS):
+```bash
+echo -e "\n# Set path for cosmopower organization data\nexport PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile
+```
+
+To apply the changes immediately:
+```bash
+source ~/.bash_profile
+```
+
+Now, every time you open a terminal, the `PATH_TO_COSMOPOWER_ORGANIZATION` environment variable will automatically be set to your specified directory, ensuring the neural nets emulators are always stored in the correct location.
+
+
+
 
 - Tip 1: Check [here](#library-and-include-path-configuration) (this is **important**). 
 
