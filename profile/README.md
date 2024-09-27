@@ -68,11 +68,10 @@ $ python
 >>> pip install classy_sz
 ```
 
-We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
 
-You may also want to take a look at a brief summary from ([B. Bolliet, A. Kusiak, F. McCarthy, et al 2023](https://arxiv.org/abs/2310.18482)).
+You may want to take a look at a brief summary on class_sz here: [B. Bolliet, A. Kusiak, F. McCarthy, et al 2023](https://arxiv.org/abs/2310.18482).
 
-Looking to modify the code, or to understand how it works? check [here](#for-developers). We are working on re-factoring the code so it becomes more modular and user friendly. Stay tuned!
+Looking to modify the code, or to understand how it works? check [here](#for-developers). Note that we are working on re-factoring the code so it becomes more modular and user friendly. Stay tuned!
 
 
 ## Computing 
