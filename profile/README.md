@@ -22,7 +22,7 @@ To ensure this variable is set every time you open a terminal, you can add this 
 
 For `~/.bashrc` (common for most Linux systems):
 ```bash
-echo -e "\n# Set path for cosmopower organization data\nexport PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc
+echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc
 ```
 
 To apply the changes immediately:
@@ -32,7 +32,7 @@ source ~/.bashrc
 
 For `~/.bash_profile` (common for macOS):
 ```bash
-echo -e "\n# Set path for cosmopower organization data\nexport PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile
+echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile
 ```
 
 To apply the changes immediately:
@@ -58,8 +58,8 @@ Now, every time you open a terminal, the `PATH_TO_COSMOPOWER_ORGANIZATION` envir
 - Tip 6: **We  strongly encourage to use a python virtual environment**:
 
 ```bash
-$ echo -e "\n# Set path for cosmopower organization data\nexport PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc # if you are on Linux
-$ (on MacOS: echo -e "\n# Set path for cosmopower organization data\nexport PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile)
+$ echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc # if you are on Linux
+$ (on MacOS: echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile)
 $ module load python # if you are on a computing cluster
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
 $ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
