@@ -35,15 +35,7 @@ To apply the changes immediately:
 source ~/.bashrc
 ```
 
-For `~/.bash_profile` (common for macOS):
-```bash
-echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile
-```
-
-To apply the changes immediately:
-```bash
-source ~/.bash_profile
-```
+(Replace `bashrc` by `bash_profile` if you use macOS.)
 
 Now, every time you open a terminal, the `PATH_TO_COSMOPOWER_ORGANIZATION` environment variable will automatically be set to your specified directory, ensuring the neural nets emulators are always stored in the correct location.
 
@@ -69,8 +61,7 @@ $ module load python # if you are on a computing cluster
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
 $ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
 $ source $VENVDIR/name-of-your-venv/bin/activate
-$ python
->>> pip install classy_sz
+$ pip install classy_sz
 ```
 
 
