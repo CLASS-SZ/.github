@@ -5,7 +5,7 @@ Cosmic Linear Anisotropy Solving System with Machine Learning Accelerated and Ac
 To install the code (copy and paste into your terminal): 
 
 ```bash
-pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && cd class_sz && pip install -e . && source set_class_sz_env.sh
+pip install classy_sz
 ```
 
 - Tip 1: Check [here](#library-and-include-path-configuration) (this is **important**). 
@@ -25,7 +25,7 @@ $ module load python # if you are on a computing cluster
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
 $ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
 $ source $VENVDIR/name-of-your-venv/bin/activate
-$ pip install classy_szfast && git clone https://github.com/CLASS-SZ/class_sz && cd class_sz && pip install -e . && source set_class_sz_env.sh
+$ pip install classy_sz
 ```
 
 We release example [notebooks](https://github.com/CLASS-SZ/notebooks).
