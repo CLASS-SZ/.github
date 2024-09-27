@@ -2,6 +2,9 @@
 
 Cosmic Linear Anisotropy Solving System with Machine Learning Accelerated and Accurate CMB, LSS, and Halo Model Observables Computations. 
 
+
+## Installing the code
+
 To install the code do: 
 
 ```python
