@@ -77,7 +77,8 @@ Looking to modify the code, or to understand how it works? check [here](#for-dev
 
 ## Computing 
 
-Have a look at the [notebooks](https://github.com/CLASS-SZ/notebooks), there are loads of examples. 
+Have a look at the [notebooks](https://github.com/CLASS-SZ/notebooks), there are loads of examples. Because the code is still evolving, we apologize that some of the examples may not run fully smoothly. 
+We shall update our notebook toolbox by the end of 2025. 
 
 The idea is: 
 
