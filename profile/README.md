@@ -59,7 +59,7 @@ $ echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data"
 $ (on MacOS: echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile)
 $ module load python # if you are on a computing cluster
 $ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
-$ python -m venv --system-site-packages $VENVDIR/name-of-your-venv
+$ python -m venv --system-site-packages $VENVDIR/name-of-your-venv # dont use --system-site-packages if you want to start from a fresh environment (without inheriting parent packages)
 $ source $VENVDIR/name-of-your-venv/bin/activate
 $ pip install classy_sz
 ```
