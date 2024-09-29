@@ -25,7 +25,7 @@ The idea is:
 ```python
 from classy_sz import Class as Class_sz
 class_sz = Class_sz()
-class_sz.set({'output':'tSZ_1h, tSZ_gal_1h'}) # ask for cross-correlations, tsz, etc.
+class_sz.set({'output':'tSZ_1h'}) # ask for cross-correlations, tsz, etc.
 class_sz.compute()
 ```
 
