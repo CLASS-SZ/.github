@@ -10,64 +10,9 @@ To install the code, run:
 pip install classy_sz
 ```
 
-[This notebook](https://github.com/CLASS-SZ/notebooks/blob/main/classy_szfast/classy_szfast_install.ipynb) shows you the full installation in Colab. [Click here](https://colab.research.google.com/github/CLASS-SZ/notebooks/blob/main/classy_szfast/classy_szfast_install.ipynb) to open it directly in Colab.
+Check our [evolving documentation](https://class-sz.readthedocs.io/en/latest/index.html) 
 
-
-By default, the neural nets emulators (~1GB of files) will be installed in your home directory. If you're working on a computing cluster or prefer to store the data elsewhere, you can specify a custom directory.
-
-To specify where you want to store the neural nets data, run the following command in your terminal **before** installing the package:
-
-```bash
-export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data
-```
-
-This command sets the `PATH_TO_COSMOPOWER_ORGANIZATION` variable for the current session.
-
-To ensure this variable is set every time you open a terminal, you can add this line to your `~/.bashrc` or `~/.bash_profile` file automatically using the `echo` command.
-
-For `~/.bashrc` (common for most Linux systems):
-```bash
-echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc
-```
-
-To apply the changes immediately:
-```bash
-source ~/.bashrc
-```
-
-(Replace `bashrc` by `bash_profile` if you use macOS.)
-
-Now, every time you open a terminal, the `PATH_TO_COSMOPOWER_ORGANIZATION` environment variable will automatically be set to your specified directory, ensuring the neural nets emulators are always stored in the correct location.
-
-
-
-
-- Tip 1: Check [here](#library-and-include-path-configuration) (this is **important**). 
-
-- Tip 2: Are you a Mac M1 user? Check [here](#tensorflow-on-mac-m1). 
-
-- Tip 3: Try to install from [source](#for-developers) (use tip 1 and/or 2 from above if needed).
-
-- Tip 4: Does the problem seem to be related  to tensorflow or cosmopower? Check [here](#tips-for-cosmopower-installation)
-
-- Tip 5: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
-
-- Tip 6: **We  strongly encourage to use a python virtual environment**:
-
-```bash
-$ echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc # if you are on Linux
-$ (on MacOS: echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile)
-$ module load python # if you are on a computing cluster
-$ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
-$ python -m venv --system-site-packages $VENVDIR/name-of-your-venv # dont use --system-site-packages if you want to start from a fresh environment (without inheriting parent packages)
-$ source $VENVDIR/name-of-your-venv/bin/activate
-$ pip install classy_sz
-```
-
-
-You may want to take a look at a brief summary on class_sz here: [B. Bolliet, A. Kusiak, F. McCarthy, et al 2023](https://arxiv.org/abs/2310.18482).
-
-Looking to modify the code, or to understand how it works? check [here](#for-developers). Note that we are working on re-factoring the code so it becomes more modular and user friendly. Stay tuned!
+(You may also take a loook at our [legacy example notebooks](https://github.com/CLASS-SZ/notebooks), although these are no longer maintained as we move the material to the docs.)
 
 
 ## Computing 
@@ -190,6 +135,67 @@ In all these cases, please also cite the original CLASS papers:
 - [CLASS II: Approximation schemes (Blas, Lesgourgues, Tram, 2011)](http://arxiv.org/abs/1104.2933)
 
 As well as other references listed here: [http://class-code.net](http://class-code.net)
+
+
+
+## Tips for installation on a cluster
+
+
+By default, the neural nets emulators (~1GB of files) will be installed in your home directory. If you're working on a computing cluster or prefer to store the data elsewhere, you can specify a custom directory.
+
+To specify where you want to store the neural nets data, run the following command in your terminal **before** installing the package:
+
+```bash
+export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data
+```
+
+This command sets the `PATH_TO_COSMOPOWER_ORGANIZATION` variable for the current session.
+
+To ensure this variable is set every time you open a terminal, you can add this line to your `~/.bashrc` or `~/.bash_profile` file automatically using the `echo` command.
+
+For `~/.bashrc` (common for most Linux systems):
+```bash
+echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc
+```
+
+To apply the changes immediately:
+```bash
+source ~/.bashrc
+```
+
+(Replace `bashrc` by `bash_profile` if you use macOS.)
+
+Now, every time you open a terminal, the `PATH_TO_COSMOPOWER_ORGANIZATION` environment variable will automatically be set to your specified directory, ensuring the neural nets emulators are always stored in the correct location.
+
+
+
+
+- Tip 1: Check [here](#library-and-include-path-configuration) (this is **important**). 
+
+- Tip 2: Are you a Mac M1 user? Check [here](#tensorflow-on-mac-m1). 
+
+- Tip 3: Try to install from [source](#for-developers) (use tip 1 and/or 2 from above if needed).
+
+- Tip 4: Does the problem seem to be related  to tensorflow or cosmopower? Check [here](#tips-for-cosmopower-installation)
+
+- Tip 5: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
+
+- Tip 6: **We  strongly encourage to use a python virtual environment**:
+
+```bash
+$ echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc # if you are on Linux
+$ (on MacOS: echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bash_profile)
+$ module load python # if you are on a computing cluster
+$ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
+$ python -m venv --system-site-packages $VENVDIR/name-of-your-venv # dont use --system-site-packages if you want to start from a fresh environment (without inheriting parent packages)
+$ source $VENVDIR/name-of-your-venv/bin/activate
+$ pip install classy_sz
+```
+
+
+You may want to take a look at a brief summary on class_sz here: [B. Bolliet, A. Kusiak, F. McCarthy, et al 2023](https://arxiv.org/abs/2310.18482).
+
+Looking to modify the code, or to understand how it works? check [here](#for-developers). Note that we are working on re-factoring the code so it becomes more modular and user friendly. Stay tuned!
 
 
 ## For developers 
