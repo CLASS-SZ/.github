@@ -10,7 +10,7 @@ To install the code, run:
 pip install classy_sz
 ```
 
-Check our [evolving documentation](https://class-sz.readthedocs.io/en/latest/index.html) 
+Check our [evolving documentation](https://class-sz.readthedocs.io/en/latest/index.html).
 
 (You may also take a loook at our [legacy example notebooks](https://github.com/CLASS-SZ/notebooks), although these are no longer maintained as we move the material to the docs.)
 
