@@ -25,18 +25,7 @@ The idea is:
 ```python
 from classy_sz import Class as Class_sz
 class_sz = Class_sz()
-class_sz.set({'output':'tSZ_1h, tSZ_gal_1h,tSZ_gal_1h'}) # ask for cross-correlations, tsz, etc.
-class_sz.compute()
-```
-
-You can compute linear bias tracer power spectra by calling:
-
-```python
-from classy_sz import Class as Class_sz
-class_sz = Class_sz()
-class_sz.set({'output':'gal_gal_hf',
-             'non_linear': 'hmcode'
-             }) 
+class_sz.set({'output':'tSZ_1h, tSZ_gal_1h'}) # ask for cross-correlations, tsz, etc.
 class_sz.compute()
 ```
 
