@@ -44,9 +44,7 @@ class_sz.compute()
 
 ## Accelerated Computations
 
-See these [notebooks](https://github.com/CLASS-SZ/notebooks/tree/main/classy_szfast) to get started. 
-
-To run the emulator-based computations, the idea is to change:
+To run the machine learning accelerated computations, the idea is to change:
 
 ```python
 class_sz.compute()
