@@ -133,16 +133,16 @@ By default, the neural nets emulators (~1GB of files) will be installed in your 
 To specify where you want to store the neural nets data, run the following command in your terminal **before** installing the package:
 
 ```bash
-export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data
+export PATH_TO_CLASS_SZ_DATA=/path/to/store/class_sz/data
 ```
 
-This command sets the `PATH_TO_COSMOPOWER_ORGANIZATION` variable for the current session.
+This command sets the `PATH_TO_CLASS_SZ_DATA` variable for the current session.
 
 To ensure this variable is set every time you open a terminal, you can add this line to your `~/.bashrc` or `~/.bash_profile` file automatically using the `echo` command.
 
 For `~/.bashrc` (common for most Linux systems):
 ```bash
-echo -e "export PATH_TO_COSMOPOWER_ORGANIZATION=/path/to/store/emulators/data" >> ~/.bashrc
+echo -e "export PATH_TO_CLASS_SZ_DATA=/path/to/store/emulators/data" >> ~/.bashrc
 ```
 
 To apply the changes immediately:
@@ -152,7 +152,7 @@ source ~/.bashrc
 
 (Replace `bashrc` by `bash_profile` if you use macOS.)
 
-Now, every time you open a terminal, the `PATH_TO_COSMOPOWER_ORGANIZATION` environment variable will automatically be set to your specified directory, ensuring the neural nets emulators are always stored in the correct location.
+Now, every time you open a terminal, the `PATH_TO_CLASS_SZ_DATA` environment variable will automatically be set to your specified directory, ensuring the neural nets emulators are always stored in the correct location.
 
 
 
