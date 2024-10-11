@@ -210,6 +210,14 @@ Clean up and compile:
 
 ```bash
 $ git clone https://github.com/CLASS-SZ/class_sz
+$ git clone https://github.com/CLASS-SZ/get_cosmopower_emus.git
+$ cd get_cosmopower_emus
+$ pip install -e .
+$ cd ..
+$ git clone https://github.com/CLASS-SZ/class_sz_data.git
+$ cd class_sz_data
+$ pip install -e .
+$ cd ..
 $ cd class_sz/class-sz/python
 $ git clone https://github.com/CLASS-SZ/classy_szfast
 $ cd ..
