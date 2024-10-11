@@ -134,6 +134,7 @@ To specify where you want to store the neural nets data, run the following comma
 
 ```bash
 export PATH_TO_CLASS_SZ_DATA=/path/to/store/class_sz/data
+mkdir -p $PATH_TO_CLASS_SZ_DATA/class_sz_data_directory
 ```
 
 This command sets the `PATH_TO_CLASS_SZ_DATA` variable for the current session.
@@ -142,7 +143,8 @@ To ensure this variable is set every time you open a terminal, you can add this 
 
 For `~/.bashrc` (common for most Linux systems):
 ```bash
-echo -e "export PATH_TO_CLASS_SZ_DATA=/path/to/store/class_sz_data/data" >> ~/.bashrc
+echo -e "\n# Set path for CLASS-SZ data\nexport PATH_TO_CLASS_SZ_DATA=/path/to/store/class_sz/data" >> ~/.bashrc
+echo -e "\n# Create directory for CLASS-SZ data\nmkdir -p \$PATH_TO_CLASS_SZ_DATA/class_sz_data_directory" >> ~/.bashrc
 ```
 
 To apply the changes immediately:
