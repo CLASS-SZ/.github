@@ -228,8 +228,6 @@ $ ./download_emulators.sh
 $ make clean
 $ make -j
 $ export PYTHONPATH=$(pwd)/python/classy_szfast:$PYTHONPATH
-$ cd ..
-$ source set_class_sz_env.sh
 
 ```
 
