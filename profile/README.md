@@ -142,7 +142,7 @@ To ensure this variable is set every time you open a terminal, you can add this 
 
 For `~/.bashrc` (common for most Linux systems):
 ```bash
-echo -e "export PATH_TO_CLASS_SZ_DATA=/path/to/store/emulators/data" >> ~/.bashrc
+echo -e "export PATH_TO_CLASS_SZ_DATA=/path/to/store/class_sz_data/data" >> ~/.bashrc
 ```
 
 To apply the changes immediately:
