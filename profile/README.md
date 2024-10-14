@@ -157,40 +157,6 @@ In all these cases, please also cite the original CLASS papers:
 
 As well as other references listed here: [http://class-code.net](http://class-code.net)
 
-
-
-## Tips for developers
-
-
-
-- Tip 1: Check [here](#library-and-include-path-configuration) (this is **important**). 
-
-- Tip 2: Are you a Mac M1 user? Check [here](#tensorflow-on-mac-m1). 
-
-- Tip 3: Try to install from [source](#for-developers) (use tip 1 and/or 2 from above if needed).
-
-- Tip 4: Does the problem seem to be related  to tensorflow or cosmopower? Check [here](#tips-for-cosmopower-installation)
-
-- Tip 5: If it still crashes, open an [issue](https://github.com/CLASS-SZ/class_sz/issues) and get in touch (we will aim to respond within 24h). 
-
-- Tip 6: **We  strongly encourage to use a python virtual environment**:
-
-```bash
-$ echo -e "export PATH_TO_CLASS_SZ_DATA=/path/to/store/emulators/data" >> ~/.bashrc # if you are on Linux
-$ (on MacOS: echo -e "export PATH_TO_CLASS_SZ_DATA=/path/to/store/emulators/data" >> ~/.bash_profile)
-$ module load python # if you are on a computing cluster
-$ VENVDIR=/path/to/wherever/you/want/to/store/your/venvs
-$ python -m venv --system-site-packages $VENVDIR/name-of-your-venv # dont use --system-site-packages if you want to start from a fresh environment (without inheriting parent packages)
-$ source $VENVDIR/name-of-your-venv/bin/activate
-$ pip install classy_sz
-```
-
-
-You may want to take a look at a brief summary on class_sz here: [B. Bolliet, A. Kusiak, F. McCarthy, et al 2023](https://arxiv.org/abs/2310.18482).
-
-Looking to modify the code, or to understand how it works? check [here](#for-developers). Note that we are working on re-factoring the code so it becomes more modular and user friendly. Stay tuned!
-
-
 ## For developers 
 
 If you are a developer, you will need to modify the C code and the python wrapper. 
