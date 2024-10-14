@@ -15,7 +15,7 @@ Check our [evolving documentation](https://class-sz.readthedocs.io/en/latest/ind
 
 By default, the neural nets emulators (~1GB of files) will be installed in your home directory. If you're working on a computing cluster or prefer to store the data elsewhere, you can specify a custom directory.
 
-To specify where you want to store the neural nets data, run the following command in your terminal **before** installing the package:
+To specify where you want to store the neural nets data, run the following command in your terminal **before** importing the package:
 
 ```bash
 export PATH_TO_CLASS_SZ_DATA=/path/to/store/class_sz/data
