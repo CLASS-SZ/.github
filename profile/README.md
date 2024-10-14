@@ -159,7 +159,7 @@ As well as other references listed here: [http://class-code.net](http://class-co
 
 ## For developers 
 
-If you are a developer, you will need to modify the C code and the python wrapper. 
+If you are a developer, you may need to modify the C code and the python wrapper to implement your own functions, or modify existing ones. 
 
 CLASS_SZ functionalities are located in the files:
 
@@ -203,9 +203,7 @@ $ export PYTHONPATH=$(pwd)/python/classy_szfast:$PYTHONPATH
 
 The `-j` flag speeds up the compilation process by using multiple cores. 
 
-If this crashes, check the tips at the top of the page.
-
-If it installes, run the C code with many power spectra output:
+If it installs, run the C code with many power spectra output:
 
 ```bash
 $ ./class_sz class_sz_test.ini
