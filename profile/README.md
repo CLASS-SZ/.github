@@ -37,7 +37,7 @@ To apply the changes immediately:
 source ~/.bashrc
 ```
 
-(Replace `bashrc` by `bash_profile` if you use macOS.)
+(If you use macOS, use `.bash_profile` instead of `bashrc`, replace accordingly above.)
 
 Now, every time you open a terminal, the `PATH_TO_CLASS_SZ_DATA` environment variable will automatically be set to your specified directory, ensuring the neural nets emulators are always stored in the correct location.
 
