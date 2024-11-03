@@ -287,39 +287,3 @@ The following line should fix most issues:
 ```bash
 $ conda install -c apple tensorflow-deps
 ```
-
-## Tips for cosmopower installation
-
-If issues seem to be related to cosmopower, you can try the following commands before installing class_sz:
-
-```bash
-$ module load python
-$ python3 -m venv /path/to/your/venv
-$ source /path/to/your/venv/bin/activate
-#
-$ pip install --upgrade pip
-#
-$ module swap PrgEnv-${PE_ENV,,} PrgEnv-gnu
-$ MPICC="cc -shared" pip install --force-reinstall --no-cache-dir --no-binary=mpi4py mpi4py
-#
-$ pip install numpy scipy
-# these below are probably not needed for cosmopower, but we keep them here as they may solve dependicies.
-$ pip install healpy camb
-$ pip install astropy h5py setuptools "iminuit>=2.0.0" cachetools matplotlib
-$ pip install hankl
-$ pip install tf-keras cosmopower mcfit
-$ pip install -U --force-reinstall charset-normalizer
-$ python3 -c 'import cosmopower as cp'
-```
-
-And then install class_sz (see top of page).
-
-(Thanks to V. Irsic and R. de Belsunce for this.) 
-
-## Pre M1 Mac
-
-See Makefile_preM1mac for an example makefile for older Macs (without the M1 chip). Some key points include adding paths involving libomp to LDFLAG and INCLUDES.
-In python/setup.py, you may also want to modify the extra_link_args list to contain '-lomp' instead of '-lgomp' and add the libomp library path as well to that list. 
-For example, extra_link_args=['-lomp', '-lgsl','-lfftw3','-lgslcblas', '-L/usr/local/opt/libomp/lib/'].
-
-This makefile is not maintained anymore but we keep it for reference. If you need to run class_sz on a pre-M1 Mac and have serious issues, please contact us.
