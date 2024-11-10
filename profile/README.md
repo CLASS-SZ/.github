@@ -1,3 +1,6 @@
+[![Documentation Status](https://readthedocs.org/projects/class-sz/badge/?version=latest)](https://class-sz.readthedocs.io/en/latest/index.html)
+
+
 # CLASS_SZ
 
 Cosmic Linear Anisotropy Solving System with Machine Learning Accelerated and Accurate CMB, LSS, and Halo Model Observables Computations.
