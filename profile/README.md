@@ -21,6 +21,8 @@ To install the code, run:
 pip install classy_sz
 ```
 
+(Note that this does not currenty run on Windows OS.)
+
 By default, the neural nets emulators (~1GB of files) will be installed in your home directory. If you're working on a computing cluster or prefer to store the data elsewhere, you can specify a custom directory.
 
 To specify where you want to store the neural nets data, run the following command in your terminal **before** importing the package:
