@@ -53,36 +53,13 @@ Now, every time you open a terminal, the `PATH_TO_CLASS_SZ_DATA` environment var
 
 
 
-
-
-(You may also take a loook at our [legacy example notebooks](https://github.com/CLASS-SZ/notebooks), although these are no longer maintained as we move the material to the docs.)
-
-
-
-## Computing 
-
-Have a look at the [notebooks](https://github.com/CLASS-SZ/notebooks), there are loads of examples. Because the code is still evolving, we apologize that some of the examples may not run fully smoothly. 
-We shall update our notebook toolbox by the end of 2025. 
-
-The idea is: 
-
-```python
-from classy_sz import Class as Class_sz
-class_sz = Class_sz()
-class_sz.set({'output':'tSZ_1h'}) # ask for cross-correlations, tsz, etc.
-class_sz.compute()
-```
+(You may also take a loook at our [legacy example notebooks](https://github.com/CLASS-SZ/notebooks), although these are no longer maintained and may not run. We are in the process of moving the material to the [docs](https://class-sz.readthedocs.io/en/latest/index.html) by the end of 2024.)
 
 
 
 ## Accelerated Computations
 
-To run the machine learning accelerated computations, the idea is to change:
-
-```python
-class_sz.compute()
-```
-to:
+To run the machine learning accelerated computations, the idea is to use:
 
 ```python
 class_sz.compute_class_szfast()
