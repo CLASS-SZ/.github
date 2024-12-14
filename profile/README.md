@@ -27,7 +27,9 @@ pip install classy_sz
 
 (Note that this does not currenty run on Windows OS. If you have a Windows laptop, just install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) and make your life easier.)
 
-## Package data 
+We have uploaded pre-compiled wheels on [PyPi](https://pypi.org/project/classy-sz/#files), so the `pip install` should work on all recent Mac and Linux OS with Python version > 3.9. If it doesn't work for you, please get in touch!
+
+## Package data (optional)
 
 By default, the neural nets emulators (~1GB of files) will be installed in your home directory. If you're working on a computing cluster or prefer to store the data elsewhere, you can specify a custom directory.
 
