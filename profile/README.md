@@ -29,9 +29,11 @@ pip install classy_sz
 
 We have uploaded pre-compiled wheels on [PyPi](https://pypi.org/project/classy-sz/#files), so the `pip install` should work on all recent Mac and Linux OS with Python version > 3.9. If it doesn't work for you, please get in touch!
 
-## Package data (optional)
+## Package Data (optional)
 
-By default, the neural nets emulators (~1GB of files) will be installed in your home directory. If you're working on a computing cluster or prefer to store the data elsewhere, you can specify a custom directory.
+By default, the neural nets emulators (~1GB of files) will be installed in your home directory. 
+
+If you're working on a computing cluster or prefer to store the data elsewhere, you can specify a custom directory.
 
 To specify where you want to store the neural nets data, run the following command in your terminal **before** importing the package:
 
@@ -58,7 +60,6 @@ source ~/.bashrc
 (If you use macOS, use `.bash_profile` instead of `bashrc`, replace accordingly above.)
 
 Now, every time you open a terminal, the `PATH_TO_CLASS_SZ_DATA` environment variable will automatically be set to your specified directory, ensuring the neural nets emulators are always stored in the correct location.
-
 
 
 (You may also take a look at our [legacy example notebooks](https://github.com/CLASS-SZ/notebooks), although these are no longer maintained and may not run. We are in the process of moving the material to the [docs](https://class-sz.readthedocs.io/en/latest/index.html) during 2025.)
@@ -107,7 +108,7 @@ cl_te_fast = lensed_cls['te']
 cl_pp_fast = lensed_cls['pp']
 ```
 
-## Some basic info
+## Some Basic Info
 
 CLASS_SZ is as fast as it gets, with full parallelization, implementation of high-accuracy neural network emulators, and Fast Fourier Transforms.
 
