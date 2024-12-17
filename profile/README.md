@@ -61,7 +61,7 @@ Now, every time you open a terminal, the `PATH_TO_CLASS_SZ_DATA` environment var
 
 
 
-(You may also take a loook at our [legacy example notebooks](https://github.com/CLASS-SZ/notebooks), although these are no longer maintained and may not run. We are in the process of moving the material to the [docs](https://class-sz.readthedocs.io/en/latest/index.html) by the end of 2024.)
+(You may also take a look at our [legacy example notebooks](https://github.com/CLASS-SZ/notebooks), although these are no longer maintained and may not run. We are in the process of moving the material to the [docs](https://class-sz.readthedocs.io/en/latest/index.html) during 2025.)
 
 
 
