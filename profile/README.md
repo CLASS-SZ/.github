@@ -3,8 +3,6 @@
 
 
 
-<font color="red"><strong>IMPORTANT: `classy_sz` is no longer directly maintained, as we are now focusing on developing [CMBAGENT](https://github.com/CMBAgents/cmbagent), which is intended to largely supersede `classy_sz`.</strong></font>
-
 
 
 
