@@ -12,6 +12,11 @@ Cosmic Linear Anisotropy Solving System with Machine Learning Accelerated and Ac
 
 *Class_sz is compatible with **Jax** and now allows for **automatic differentiation** on some of its output, see [here](https://class-sz.readthedocs.io/en/latest/notebooks/classy_szfast_matter_pk_linear.html#Gradients-at-all-k's) for an example on the matter power spectrum. The code can now be used in Hamiltonian Monte Carlo and Simulation Based Inference pipelines.* 
 
+
+***IMPORTANT UPDATE MAY 2026**: A new version of the code is available [here](https://github.com/CLASS-SZ/classy_szlite), it's pip installable, maintained with a test suite, and pure Python/Jax. Checkout the [docs](https://classy-szlite.readthedocs.io/en/latest/) with some [cool examples](https://classy-szlite.readthedocs.io/en/latest/examples.html) such as 10s inference with HMC. 
+The code is called [`classy_szlite`](https://github.com/CLASS-SZ/classy_szlite).
+
+
 ## Documentation
 
 Check our [evolving documentation](https://class-sz.readthedocs.io/en/latest/index.html).
